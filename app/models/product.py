@@ -16,6 +16,7 @@ class Product(BaseModel):
     # https://docs.pydantic.dev/latest/concepts/validators/
     # if thumbnail missing, use a default
     @field_validator('thumbnail')
+    # v represents the field value
     def default_image(cls, v: str, info: ValidationInfo) -> str:
         assert v is not None, 'thumbnail image not supplied, using placeholder'
         if (v == "") :
