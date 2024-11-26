@@ -52,11 +52,21 @@
                 <form class="ms-2 me-auto" hx-post="/product/" hx-target="#productList" hx-swap="beforeend">
                     <fieldset>
                         <legend>Add a new product</legend>
-                        <div class="mb-3">
-                            <label for="category_id" class="form-label">Category</label>
-                            <input type="text" class="form-control" id="category_id" name="category_id" required>
-                        </div>
-                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="category_id" class="form-label">Category</label>
+                                <select class="form-select" id="category.name" name="category.name" required>
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option value="1">Books</option>
+                                    <option value="2">Computer</option>
+                                    <option value="3">Entertainment</option>
+                                    <option value="4">Furniture</option>
+                                    <option value="5">kitchen</option>
+                                    <option value="6">Laundry</option>
+                                    <option value="7">Mobile Devices</option>
+                                </select>
+                            </div>
+    
+                            <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" name="title" required>
                         </div>
